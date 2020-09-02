@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
 
     while(running){
         string word;
-        char choice;
+        char choice = '\0';
         cout << "Input: ";
         cin >> word;
         if(argc > 1){
@@ -34,11 +34,11 @@ int main(int argc, char *argv[]){
         else{
             root->prefixSearch(root, lowerCase(word), 0);
         }
-        
+       
         ask = true;
         
         while(ask){
-            cout << "Search Again? [Y/N]: ";
+             cout << "Search Again? [Y/N]: ";
             cin >> choice;
             if(toupper(choice) == 'N'){
                 ask = false;
